@@ -1,0 +1,74 @@
+### Test Server
+//GET http://localhost:5000/api/codes
+POST http://localhost:5000/api/codes HTTP/1.1
+
+
+
+content https://jsonplaceholder.typicode.com/posts/3   
+Content-Type: application/json  
+
+
+### Server Test
+GET http://localhost:5000/
+
+###
+
+### Auth Test
+GET http://localhost:5000/api/auth/test
+
+###
+
+### Create User
+POST http://localhost:5000/api/auth
+Content-Type: application/json
+
+{
+  "name": "Nehal",
+  "email": "nehal@test.com",
+  "password": "123456"
+}
+
+###
+
+### Get Notes
+GET http://localhost:5000/api/notes
+
+###
+
+### Add Note
+POST http://localhost:5000/api/notes
+Content-Type: application/json
+
+{
+  "name": "Nehal",
+  "email": "nehal@test.com",
+  "password": "123456"
+}
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "nehal@test.com",
+  "password": "123456"
+}
+### Login User
+POST http://localhost:5000/api/auth/login 
+Content-Type: application/json
+
+{
+  "email": "nehal@test.com",
+  "password": "123456"
+}
+### Update Note
+PUT http://localhost:5000/api/notes/64a7f3e2f1d2c5b1a2b3c4d5
+Content-Type: application/json
+
+{
+  "title": "Updated Note Title",
+  "description": "Updated description for the note.",
+  "tag": "updated-tag"
+}
+### Delete Note
+DELETE http://localhost:5000/api/notes/64a7f3e2f1d2c5b1a2b3c4d5   
+
+      
