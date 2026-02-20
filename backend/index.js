@@ -12,9 +12,10 @@ app.use(express.json());
 
 // Routes
 app.use('/api/auth', require('./routes/auth'));
+app.use('/api/notes', require('./routes/notes'));
 
 app.get('/', (req, res) => {
-  res.send('Backend running 🚀');
+  res.send('Backend running successfully');
 });
 
 const PORT = 5000;
